@@ -1,0 +1,415 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.error{
+  display: none;
+  color: #fff;
+  position: absolute;
+  top: 35%;
+  font-size: 50px;
+  font-weight: 900;
+}
+.jumpbtn{
+  display: none;
+}
+.overflow{
+width:fit-content;
+height: fit-content;
+}
+.start{
+  width:auto;
+  padding: 10px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 900;
+  color: antiquewhite;
+  position: absolute;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(19, 94, 165);
+  left:280px;
+  top:45%
+}
+body{
+  background-color: black;
+}
+.gamecontainerAni {
+  animation-duration: 4s;
+  background-color: rgba(120, 124, 187, 0.74);
+}
+.gamecontainerAni1 {
+  background-color: rgba(218, 218, 218, 0.74);
+}
+.dailogbox {
+  padding-top: 80px;
+  padding-left: 80px;
+  padding-right: 60px;
+  width: 300px;
+  height: 100px;
+  font-size: 25px;
+  font-weight: 900;
+  color: whitesmoke;
+  border-radius: 20px;
+  box-shadow: 2px 2px 20px black;
+  background-color: #7fdbff;
+  z-index: 5;
+  position: absolute;
+  top: 25%;
+  left: 22%;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7fdbff,
+    0 0 82px #7fdbff, 0 0 92px #7fdbff, 0 0 102px #7fdbff, 0 0 151px #7fdbff;
+  animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+.dailogbox1 {
+  animation-name: dailogbox;
+  animation-duration: 3s;
+}
+@keyframes dailogbox {
+  100% {
+    width: 0px;
+    height: 0px;
+    font-size: 10px;
+    transform: rotate3d(200, 200, 200, 360deg);
+    opacity: -0.1;
+  }
+}
+#restartdialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 300px;
+  height: auto;
+  font-size: 30px;
+  font-weight: 900;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 0px;
+  padding-left: 60px;
+  border-radius: 20px;
+  background-color: #001f3f;
+  position: absolute;
+  top: 45%;
+  left: 470px;
+  opacity: 0.8;
+  z-index: 1;
+  animation: flicker1 1.5s infinite alternate;
+}
+@keyframes flicker1 {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 42px #001f3f,
+      0 0 82px #001f3f, 0 0 92px #001f3f, 0 0 102px #001f3f, 0 0 151px #001f3f;
+    box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #001f3f,
+      0 0 82px #001f3f, 0 0 92px #001f3f, 0 0 102px #001f3f, 0 0 151px #001f3f;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.name {
+  margin-top: 0;
+  width: 300px;
+  font-weight: 900;
+  color: whitesmoke;
+  font-size: 40px;
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+  left: -100%;
+  background-color: #7fdbff;
+  z-index: 1;
+  border-style: none;
+  animation: flicker 4s infinite ease-in-out;
+}
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+    box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7fdbff,
+      0 0 82px #7fdbff, 0 0 92px #7fdbff, 0 0 102px #7fdbff, 0 0 151px #7fdbff;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
+}
+.nameAni {
+  top: 10%;
+}
+.scoreCont {
+  color: #0fa;
+  font-weight: 900;
+  position: absolute;
+  left: 455px;
+}
+.bgimg {
+  width: 800px;
+  height: 280px;
+  background: url("bgimg.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 20px;
+  top: 120px;
+}
+.gamecontainer {
+  width: 700px;
+  height: 350px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.685);
+  border-radius: 40px;
+  padding: 20px;
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7fdbff,
+  0 0 82px #7fdbff, 0 0 92px #7fdbff, 0 0 102px #7fdbff, 0 0 151px #7fdbff;
+}
+@media screen and (max-width: 500px) {
+  .overflow{
+    display: none;
+  }
+  .error{
+    display: block;
+  }
+  
+}
+
+@keyframes example {
+  0% {
+    background-color: rgba(255, 0, 0, 0.363);
+  }
+  10% {
+    background-color: rgba(255, 255, 0, 0.349);
+  }
+  20% {
+    background-color: rgba(0, 0, 255, 0.274);
+  }
+  30% {
+    background-color: rgba(0, 128, 0, 0.26);
+  }
+  40% {
+    background-color: rgba(0, 204, 255, 0.644);
+  }
+  50% {
+    background-color: rgba(255, 255, 0, 0.212);
+  }
+  60% {
+    background-color: rgba(0, 0, 255, 0.226);
+  }
+  70% {
+    background-color: rgba(0, 128, 0, 0.212);
+  }
+  80% {
+    background-color: rgba(255, 0, 0, 0.308);
+  }
+  90% {
+    background-color: rgba(255, 255, 0, 0.267);
+  }
+  100% {
+    background-color: rgba(0, 0, 255, 0.274);
+  }
+}
+.road {
+  height: 250px;
+  width: 2000px;
+  background: url("road.png");
+  background-repeat: no-repeat;
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  bottom: 0px;
+  top: 90%;
+}
+.roadAni {
+  animation: roadAni 3s linear infinite;
+}
+@keyframes roadAni {
+  0% {
+    left: 1vw;
+  }
+  100% {
+    left: -80vw;
+  }
+}
+.jumpbtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 250px;
+  top: 85%;
+  left: 45%;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 5px black;
+  animation: example 10s ease infinite;
+  box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #7fdbff,
+    0 0 82px #7fdbff, 0 0 92px #7fdbff, 0 0 102px #7fdbff, 0 0 151px #7fdbff;
+}
+.instruction {
+  font-size: 18px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 139, 0.562);
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  position: absolute;
+  bottom: 250px;
+  top: 5%;
+  left: 500px;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 10px black;
+}
+
+#sprite-image {
+  height: 45px;
+  width: 35px;
+  background: url("robot.png") 0px 0px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  left: 100px;
+}
+.animation {
+  animation: character 0.8s linear;
+}
+@keyframes character {
+  0% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 200px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+#obsticle {
+  color: black;
+  height: 32px;
+  width: 65.25px;
+  background: url("obsticle1.png");
+  animation-delay: 1s;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+  left: 800px;
+}
+.obsticleAni {
+  animation: obsticleAni 5s linear infinite;
+}
+@keyframes obsticleAni {
+  0% {
+    left: 800px;
+  }
+  100% {
+    left: -1vw;
+  }
+}
+#obsticle2 {
+  width: 24px;
+  height: 32px;
+  background: url("ob2.png");
+  position: absolute;
+  bottom: 20px;
+  left: 800px;
+  z-index: 1;
+}
+.obsticle2Ani {
+  animation: obsticle2 5s linear infinite;
+}
+@keyframes obsticle2 {
+  0% {
+    left: 800px;
+  }
+  100% {
+    left: -1px;
+  }
+}
+#obsticle3 {
+  width: 24px;
+  height: 32px;
+  background: url("ob3.png");
+  position: absolute;
+  bottom: 20px;
+  left: 800px;
+  z-index: 1;
+}
+.obsticle3Ani {
+  animation: obsticle3 5s linear infinite;
+}
+@keyframes obsticle3 {
+  0% {
+    left: 800px;
+  }
+  100% {
+    left: -1px;
+  }
+}
+#obsticle4 {
+  width: 40px;
+  height: 40px;
+  background: url("ob4.png");
+  position: absolute;
+  bottom: 20px;
+  left: 800px;
+  z-index: 1;
+}
+
+.obsticle4Ani {
+  animation: obsticle4 4s linear infinite;
+}
+
+@keyframes obsticle4 {
+  0% {
+    left: 800px;
+  }
+  100% {
+    left: -1vw;
+  }
+}
+#cloudimg {
+  width: 2000px;
+  height: 80px;
+  background: url("cloud.png");
+  animation: cloudimg1 20s linear infinite;
+  position: absolute;
+  top: 10%;
+  right: 1000px;
+}
+
+@keyframes cloudimg1 {
+  0% {
+    left: 500px;
+  }
+
+  100% {
+    left: -2000px;
+  }
+}
+.instruction1{
+  display: none;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .charecter {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            top: 500px;
+            bottom: 20px;
+            left: 800px;
+            animation: obsticle4 4s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes obsticle4 {
+            0% {
+                top: 20px;
+            }
+
+            100% {
+                top: 100%;
+            }
+        }
+    </style>
+    <div class="charecter"></div>
+</body>
+
+</html>

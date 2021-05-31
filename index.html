@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump()">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    </link>
+</head>
+
+<body>
+    <div class="error">Sorry,Works Only on Desktop Device or Greater Than 500px Screen</div>
+    <div class="overflow">
+        <audio id="bgaudio" autoplay loop>
+            <source src="scales_of_joy_preview.mp3" type="audio/mpeg">
+        </audio>
+        <div class="gamecontainer">
+            <div id="scoreCont"></div>
+            <div class="bgimg"></div>
+            <div class="character stop" id="sprite-image"></div>
+            <div id="obsticle" class="stop"></div>
+            <div id="obsticle2" class="stop"></div>
+            <div class="obsticle-image2 stop"></div>
+            <div id="cloudimg"></div>
+            <div class="road"></div>
+            <div id="obsticle3" class="stop"></div>
+            <div id="obsticle4" class="stop"></div>
+            <div class="dailogbox">Welcome To Robo Runner</div>
+            <input type="button" value="Tab To Start" class="start">
+        </div>
+        <div class="name">Robo Runner</div>
+        <div id="restartdialog"></div>
+        <div class="instruction">Use Upper Arrow Key To Jump</div>
+        <button onclick="jump()" class="jumpbtn">Jump</button>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+
+</html>
